@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.page{
+    height: 100%;
+}
+.menu-container {
+    border: 2px solid red;
+    height: 300px;
+    width: 100px; 
+    .menu-item {
+        height: 98px;
+        width: 100%;
+        border: 1px solid black;
+    }
+}
+
+.picked-container {
+    border: 2px solid blue;
+    width: 80%;
+    .clock-box{
+        background-color: red;
+        height: 100%;
+        
+    }
+    .timer-box{
+        background-color: green;
+        height: 100%;
+        
+    }
+    .stopwatch-box{
+        background-color: blue;
+        height: 100%;
+        
+    }
+}
