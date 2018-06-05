@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kgchicobava/rclock/issues"
   },
-  "homepage": "https://github.com/kgchicobava/rclock#readme"
+  "homepage": "https://github.com/kgchicobava/rclock#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
 }
