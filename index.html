@@ -11,16 +11,17 @@
     <!-- menu -->
     <div class="page flex">
         <div class="menu-container">
-            <div class="menu-item clock">clock</div>
-            <div class="menu-item timer">timer</div>
-            <div class="menu-item stopwatch">s-watch</div>
+            <div class="menu-item clock" onclick="show('clock-box')">clock</div>
+            <div class="menu-item timer" onclick="show('timer-box')">timer</div>
+            <div class="menu-item stopwatch" onclick="show('stopwatch-box')">s-watch</div>
         </div>
         <div class="picked-container">
-            <div class="clock-box">you are inside of clock</div>
-            <div class="timer-box">you are inside of timer</div>
-            <div class="stopwatch-box">you are inside of stopwatch</div>
+            <div class="menu-content clock-box">you are inside of clock</div>
+            <div class="menu-content timer-box">you are inside of timer</div>
+            <div class="menu-content stopwatch-box">you are inside of stopwatch</div>
         </div>
     </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
