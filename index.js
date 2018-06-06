@@ -14,11 +14,4 @@ function show(pick) {
 }
     document.getElementsByClassName(pick)[0].style.display = "block";
 
-
-    
-
-
-
-//    // Show the current tab, and add an "active" class to the link that opened the tab
-//    evt.currentTarget.className += " active";
 }

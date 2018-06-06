@@ -1,33 +1,46 @@
 body {
   margin: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: -moz-linear-gradient(50deg, blue 0%, black 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, blue), color-stop(100%, black));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(50deg, blue 0%, black 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(50deg, blue 0%, black 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(50deg, blue 0%, black 100%);
+  /* ie10+ */
+  background: linear-gradient(40deg, blue 0%, black 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000ff',GradientType=0 );
+  /* ie6-9 */ }
 
 .flex {
   display: flex; }
 
+svg {
+  fill: white; }
+
 .page {
-  height: 100%;
-  border: 3px solid purple; }
+  height: 100%; }
 
 .menu-container {
-  border: 2px solid red;
-  height: 300px;
-  width: 100px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 10vw; }
   .menu-container .menu-item {
-    height: 98px;
+    height: 10vw;
     width: 100%;
+    cursor: pointer;
     border: 1px solid black; }
 
 .picked-container {
-  border: 2px solid blue;
-  width: 80%; }
-  .picked-container .clock-box {
-    background-color: red;
-    height: 100%; }
-  .picked-container .timer-box {
-    background-color: green;
-    height: 100%; }
-  .picked-container .stopwatch-box {
-    background-color: blue;
-    height: 100%; }
+  box-shadow: 15px 16px 50px 0px rgba(0, 0, 0, 0.75);
+  background-color: #292ce7;
+  width: 80vw;
+  margin: 5vw;
+  border-radius: 100px; }
