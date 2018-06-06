@@ -17,6 +17,7 @@ body {
 
 svg {
     fill: white;
+    margin: 1vw;
 }
 
 .page{
@@ -33,6 +34,13 @@ svg {
         width: 100%;
         cursor: pointer;
         border: 1px solid black;
+    }
+    .description {
+        color: white;
+        font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+        text-align: center;
+        margin-top: -2vw;
+        margin-left: -1vw;
     }
 }
 

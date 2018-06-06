@@ -21,7 +21,8 @@ body {
   display: flex; }
 
 svg {
-  fill: white; }
+  fill: white;
+  margin: 1vw; }
 
 .page {
   height: 100%; }
@@ -37,6 +38,12 @@ svg {
     width: 100%;
     cursor: pointer;
     border: 1px solid black; }
+  .menu-container .description {
+    color: white;
+    font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+    text-align: center;
+    margin-top: -2vw;
+    margin-left: -1vw; }
 
 .picked-container {
   box-shadow: 15px 16px 50px 0px rgba(0, 0, 0, 0.75);
