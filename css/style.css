@@ -1,3 +1,31 @@
+.worldTime {
+  border: 2px solid white;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: stretch; }
+
+.currentTime {
+  color: white;
+  font-size: 180px;
+  text-align: center;
+  margin: 18vh 0 1vh 0;
+  font-family: "Century Gothic", "arial", "sans-serif"; }
+
+.currentDate {
+  color: white;
+  height: 50px;
+  margin: 0;
+  font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+  text-align: center;
+  font-size: 30px; }
+
+.fab {
+  height: 100px;
+  width: 100px;
+  background-color: #ff0080;
+  border-radius: 50%;
+  border: 2px solid white; }
+
 body {
   margin: 0;
   width: 100%;
@@ -34,10 +62,13 @@ svg {
   height: 100vh;
   width: 10vw; }
   .menu-container .menu-item {
+    background-color: rgba(250, 250, 250, 0.205);
+    border-radius: 40px;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
     height: 10vw;
     width: 100%;
-    cursor: pointer;
-    border: 1px solid black; }
+    cursor: pointer; }
   .menu-container .description {
     color: white;
     font-family: "Corbel", "Verdana", "Arial", "Comic Sans";

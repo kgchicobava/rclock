@@ -1,0 +1,31 @@
+.worldTime {
+    border: 2px solid white;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.currentTime {
+    color: white;
+    font-size: 180px;
+    text-align: center;
+    margin: 18vh 0 1vh 0;
+    font-family: "Century Gothic", "arial", "sans-serif";
+}
+
+.currentDate {
+    color: white;
+    height: 50px;
+    margin: 0;
+    font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+    text-align: center;
+    font-size: 30px;
+}
+
+.fab {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 0, 128);
+    border-radius: 50%;
+    border: 2px solid white;
+}

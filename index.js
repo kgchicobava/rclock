@@ -15,3 +15,4 @@ function show(pick) {
     document.getElementsByClassName(pick)[0].style.display = "block";
 
 }
+
