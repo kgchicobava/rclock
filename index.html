@@ -50,11 +50,48 @@
                 <input type="text" name="city-field" id="" class="city-search">
             </div>
             <div class="menu-content timer-box">you are inside of timer</div>
-            <div class="menu-content stopwatch-box">you are inside of stopwatch</div>
+            <div class="menu-content stopwatch-box">
+                    <div class="s-watch">
+                        <div class="laps-list">
+                            <ol id="lapID">
+                            </ol>
+                        </div>
+                            <div class="clockwrapper">
+                              <div class="outerdot paused"></div>
+                              <div class="display">00:00:00</div>
+                            </div>
+                          
+                          <div class="controls">
+                              <div class="stop">Reset</div>
+                            <div class="start btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                            </div>
+                                <div class="lap">Lap</div>
+                        </div>
+                    </div>
+                <!-- <div class="stopwatch-circle">
+                    <div class="stopwatch-test"></div>
+                    <ul class="results"></ul>
+                    <!-- <p class="sw-run"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="miliseconds">00</span></p> -->
+            <!-- </div>
+            <div class="sw-control">
+                <div class="reset-sw">Reset</div>
+                <div class="run-sw fab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72"  height="72" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </div>
+                <div class="lap-sw">Lap</div>
+            </div> -->
+        </div>
         </div>
     </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="node_modules/stopwatch-js/stopwatch-js.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

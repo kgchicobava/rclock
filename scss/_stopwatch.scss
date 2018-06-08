@@ -1,0 +1,64 @@
+
+.s-watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+.clockwrapper {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid #ffffff;
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    font-family: "Century Gothic", "Verdana", "Arial", "Comic Sans";
+    color: #ffffff;
+    font-size: 80px;
+  }
+
+
+.btn {
+    font-weight: 700;
+    transition: opacity 150ms ease-out;
+    opacity: 1;
+    background-color: rgb(255, 0, 128);
+    border-radius: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 2vh;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+.stop, .lap {
+    color: white;
+    font-size: 40px;
+    font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+  }
+
+  .controls {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 45% 10% 45%;
+  }
+
+  .laps-list {
+      position: absolute;
+      right: 10%;
+      top: 10%;
+  }
+
+  .laps-list> ol {
+    color: white;
+    font-family: "Century Gothic", "Verdana", "Arial", "Comic Sans";
+    font-size: 40px;
+  
+  }
