@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+button[data-setter] {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 25px;
+    width: 40px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button[data-setter]:hover {
+    opacity: 0.5;
+}
+
+.timer-container {
+    position: relative;
+    width: 400px;
+    margin: 5vh auto;
+}
+
+.setters {
+    position: absolute;
+    left: 95px;
+    top: 75px;
+}
+
+.minutes-set {
+    float: left;
+    margin-right: 28px;
+}
+
+.seconds-set {
+    float: right;
+}
+
+.controlls {
+    position: absolute;
+    left: 50px;
+    top: 105px;
+    text-align: center;
+}
+
+.display-remain-time {
+    font-family: "Century Gothic", "Verdana", "Arial", "Comic Sans";
+    font-weight: 100;
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+}
+
+#pause {
+    outline: none;
+    background: transparent;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.play::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 22px solid rgb(255, 0, 128);
+}
+
+.timer-circle svg {
+    margin: auto auto;
+}
+
+.pause::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 15px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 1px;
+    border: 5px solid rgb(255, 0, 128);
+    border-top: none;
+    border-bottom: none;
+}
+
+#pause:hover {
+    opacity: 0.8;
+}
+
+.e-c-base {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 10px
+}
+
+.e-c-progress {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 10px;
+    transition: stroke-dashoffset 0.7s;
+}
+
+.e-c-pointer {
+    fill: rgb(255, 0, 128);
+    stroke-width: 2px;
+}
+
+#e-pointer {
+    transition: transform 0.7s;
+}
