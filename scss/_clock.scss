@@ -1,6 +1,7 @@
 .worldTime {
     justify-content: flex-end;
     align-items: stretch;
+    transition: all 1s;
 }
 
 .currentTime {
@@ -36,8 +37,6 @@
     opacity: 1;
 }
 
-
-
 .city-search {
     width: 40%;
     background-color: rgba(250, 250, 250, 0.205);
@@ -52,4 +51,8 @@
     border-radius: 25px;
     margin-top: -70vh;
     margin-right: 2vw;
+}
+
+.city-search:focus {
+    background-color: rgba(250, 250, 250, 0.644);
 }

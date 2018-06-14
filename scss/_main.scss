@@ -20,6 +20,11 @@ svg {
     margin: 1vw;
 }
 
+.active {
+    border: 5px solid white;
+    box-shadow: 22px 22px 55px -18px rgba(0,0,0,0.75);
+}
+
 .page{
     height: 100%;
 }
@@ -57,6 +62,7 @@ svg {
 }
 
 .picked-container {
+    background-color: transparent;
     @include pick-cont;
     
 }

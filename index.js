@@ -1,14 +1,12 @@
 // CLOCK IMPLEMENTATION
-
 let clockBtn = document.getElementsByClassName("clock")[0],
     timerBtn = document.getElementsByClassName("timer")[0],
     stopwatchBtn = document.getElementsByClassName("stopwatch")[0],
     menuContent = document.getElementsByClassName("menu-content"),
     TIME_ZONE_KEY = "AIzaSyBPM8pQfZJtt5kcPzWYly8VsLFAAkwuow4",
     currTime = document.getElementsByClassName("currentTime")[0],
-    currDate = document.getElementsByClassName("currentDate")[0];
-
-let days = {
+    currDate = document.getElementsByClassName("currentDate")[0],
+    days = {
         "1": "Monday",
         "2": "Tuesday",
         "3": "Wednesday",
@@ -31,15 +29,21 @@ let days = {
         "10": "November",
         "11": "December"
     }
+    console.log(clockBtn);
+    
+clockBtn.onclick = show('clock-box');
 
 setTimeout(function () {
     let date = new Date();
-    currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    if (date.getMinutes() < 10) {currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;}
+    else {currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;}
     currDate.innerHTML = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
 }, 100);
 setInterval(function () {
     let date = new Date();
-    currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    if (date.getMinutes() < 10) {currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;}
+    else {currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;}
+    
 }, 10000);
 
 for (let i = 0; i < menuContent.length; i++) {
@@ -55,11 +59,29 @@ function show(pick) {
 }
 
 $(document).ready(function () {
+    show("clock-box");
     $(".fab").click(function () {
         $(".worldTime").toggleClass("half-w");
         $(".city-search").fadeToggle("slow");
     });
+    $(".clock").click(function() {
+        $(".clock").addClass("active");
+        show('clock-box');
+        $(".timer, .stopwatch").removeClass("active");
+    });
+    $(".timer").click(function() {
+        $(".timer").addClass("active");
+        show('timer-box');
+        $(".clock, .stopwatch").removeClass("active");
+    });
+    $(".stopwatch").click(function() {
+        $(".stopwatch").addClass("active");
+        show('stopwatch-box');
+        $(".timer, .clock").removeClass("active");
+    });
 });
+
+let citySearchBar = document.getElementsByClassName("city-search")[0];
 
 
 
