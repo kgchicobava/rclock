@@ -1,3 +1,4 @@
+"use strict";
 // CLOCK IMPLEMENTATION
 let clockBtn = document.getElementsByClassName("clock")[0],
     timerBtn = document.getElementsByClassName("timer")[0],
@@ -29,20 +30,26 @@ let clockBtn = document.getElementsByClassName("clock")[0],
         "10": "November",
         "11": "December"
     }
-    
+
 clockBtn.onclick = show('clock-box');
 
 setTimeout(function () {
     let date = new Date();
-    if (date.getMinutes() < 10) {currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;}
-    else {currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;}
+    if (date.getMinutes() < 10) {
+        currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;
+    } else {
+        currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    }
     currDate.innerHTML = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
 }, 100);
 setInterval(function () {
     let date = new Date();
-    if (date.getMinutes() < 10) {currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;}
-    else {currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;}
-    
+    if (date.getMinutes() < 10) {
+        currTime.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;
+    } else {
+        currTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    }
+
 }, 10000);
 
 for (let i = 0; i < menuContent.length; i++) {
@@ -63,19 +70,19 @@ $(document).ready(function () {
         $(".worldTime").toggleClass("half-w");
         $(".city-search").fadeToggle("slow");
     });
-    $(".clock").click(function() {
+    $(".clock").click(function () {
         $(".menu-content").animateCss("fadeIn");
         $(".clock").addClass("active");
         show('clock-box');
         $(".timer, .stopwatch").removeClass("active");
     });
-    $(".timer").click(function() {
+    $(".timer").click(function () {
         $(".menu-content").animateCss("fadeIn");
         $(".timer").addClass("active");
         show('timer-box');
         $(".clock, .stopwatch").removeClass("active");
     });
-    $(".stopwatch").click(function() {
+    $(".stopwatch").click(function () {
         $(".menu-content").animateCss("fadeIn");
         $(".stopwatch").addClass("active");
         show('stopwatch-box');
@@ -83,31 +90,31 @@ $(document).ready(function () {
     });
 
     $.fn.extend({
-        animateCss: function(animationName, callback) {
-          var animationEnd = (function(el) {
-            var animations = {
-              animation: 'animationend',
-              OAnimation: 'oAnimationEnd',
-              MozAnimation: 'mozAnimationEnd',
-              WebkitAnimation: 'webkitAnimationEnd',
-            };
-      
-            for (var t in animations) {
-              if (el.style[t] !== undefined) {
-                return animations[t];
-              }
-            }
-          })(document.createElement('div'));
-      
-          this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-      
-            if (typeof callback === 'function') callback();
-          });
-      
-          return this;
+        animateCss: function (animationName, callback) {
+            var animationEnd = (function (el) {
+                var animations = {
+                    animation: 'animationend',
+                    OAnimation: 'oAnimationEnd',
+                    MozAnimation: 'mozAnimationEnd',
+                    WebkitAnimation: 'webkitAnimationEnd',
+                };
+
+                for (var t in animations) {
+                    if (el.style[t] !== undefined) {
+                        return animations[t];
+                    }
+                }
+            })(document.createElement('div'));
+
+            this.addClass('animated ' + animationName).one(animationEnd, function () {
+                $(this).removeClass('animated ' + animationName);
+
+                if (typeof callback === 'function') callback();
+            });
+
+            return this;
         },
-      });
+    });
 
 
 });
@@ -215,7 +222,7 @@ function updateTime() {
 
 };
 
-// TIMER IMPLEMENTATION
+// *TIMER IMPLEMENTATION
 
 let progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
@@ -233,11 +240,12 @@ function update(value, timePercent) {
 //circle ends
 const displayOutput = document.querySelector('.display-remain-time')
 const pauseBtn = document.getElementById('pause');
+const resetBtn = document.querySelector(".resetTimer");
 const setterBtns = document.querySelectorAll('button[data-setter]');
 
 let intervalTimer;
 let timeLeft;
-let wholeTime = 1 * 60; // manage this to set the whole time 
+let wholeTime = 1 * 10; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
 
@@ -301,7 +309,7 @@ function pauseTimer(event) {
         isStarted = true;
         this.classList.remove('play');
         this.classList.add('pause');
-
+        resetBtn.style.display = "block";
         setterBtns.forEach(function (btn) {
             btn.disabled = true;
             btn.style.opacity = 0.5;
@@ -320,6 +328,21 @@ function pauseTimer(event) {
     }
 }
 
+function resetTimer(event) {
+    clearInterval(intervalTimer);
+    isStarted = false;
+    isPaused = false;
+    pauseBtn.classList.remove('pause');
+    pauseBtn.classList.add('play');
+    setterBtns.forEach(function (btn) {
+        btn.disabled = false;
+        btn.style.opacity = 1;
+    });
+    displayTimeLeft(wholeTime);
+    resetBtn.style.display = "none";
+    return;
+}
+
 function displayTimeLeft(timeLeft) { //displays time on the input
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
@@ -329,3 +352,4 @@ function displayTimeLeft(timeLeft) { //displays time on the input
 }
 
 pauseBtn.addEventListener('click', pauseTimer);
+resetBtn.addEventListener("click", resetTimer);

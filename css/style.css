@@ -151,6 +151,17 @@ button[data-setter]:hover {
 #e-pointer {
   transition: transform 0.7s; }
 
+.resetTimer {
+  color: white;
+  font-size: 40px;
+  margin: 0 auto;
+  font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  width: 50%;
+  display: none; }
+
 .s-watch {
   display: flex;
   flex-direction: column;
@@ -226,7 +237,7 @@ body {
   /* ie10+ */
   background: linear-gradient(40deg, blue 0%, black 100%);
   /* w3c */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000ff',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000ff', GradientType=0);
   /* ie6-9 */ }
 
 .flex {
@@ -256,6 +267,7 @@ svg {
     margin-left: 2vw;
     height: 10vw;
     width: 100%;
+    box-sizing: border-box;
     cursor: pointer; }
   .menu-container .description {
     color: white;

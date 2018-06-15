@@ -116,3 +116,15 @@ button[data-setter]:hover {
 #e-pointer {
     transition: transform 0.7s;
 }
+
+.resetTimer {
+    color: white;
+    font-size: 40px;
+    margin: 0 auto;
+    font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    width: 50%;
+    display: none;
+}

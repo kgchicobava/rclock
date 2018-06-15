@@ -3,13 +3,20 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background: -moz-linear-gradient(50deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,0,255,1)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(50deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(50deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(50deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 100%); /* ie10+ */
-    background: linear-gradient(40deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000ff',GradientType=0 ); /* ie6-9 */ 
+    background: -moz-linear-gradient(50deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 0, 255, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(50deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(50deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(50deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(40deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0000ff', GradientType=0);
+    /* ie6-9 */
 }
 
 .flex {
@@ -23,10 +30,10 @@ svg {
 
 .active {
     border: 5px solid white;
-    box-shadow: 22px 22px 55px -18px rgba(0,0,0,0.75);
+    box-shadow: 22px 22px 55px -18px rgba(0, 0, 0, 0.75);
 }
 
-.page{
+.page {
     height: 100%;
 }
 
@@ -35,7 +42,7 @@ svg {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    width: 10vw; 
+    width: 10vw;
     .menu-item {
         background-color: rgba(250, 250, 250, 0.205);
         border-radius: 40px;
@@ -43,9 +50,9 @@ svg {
         margin-left: 2vw;
         height: 10vw;
         width: 100%;
+        box-sizing: border-box;
         cursor: pointer;
     }
-    
     .description {
         color: white;
         font-family: "Corbel", "Verdana", "Arial", "Comic Sans";
@@ -56,7 +63,7 @@ svg {
 }
 
 @mixin pick-cont {
-    box-shadow: 15px 16px 50px 0px rgba(0,0,0,0.75);
+    box-shadow: 15px 16px 50px 0px rgba(0, 0, 0, 0.75);
     background-color: rgb(41, 44, 231);
     width: 80vw;
     margin: 5vw;
@@ -66,5 +73,4 @@ svg {
 .picked-container {
     background-color: transparent;
     @include pick-cont;
-    
 }
